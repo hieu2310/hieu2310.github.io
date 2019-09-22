@@ -1,0 +1,32 @@
+body{
+	margin: 0px;
+}
+.layout{
+	width: 100%;
+	display: flex;
+}
+.box{
+	width: calc( 100% / 3 );
+	height: 400px;
+}
+.red{
+	background-color: red;
+	margin-right: 15px;
+}
+.green{
+	background-color: green;
+	margin-right: 15px;
+}
+.blue{
+	background-color: blue;
+}
+.red,.green,.blue{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/*3 thuộc tính căn giữa*/
+}
+.t{
+	font-size: 30px;
+	color: #ffffff;
+}

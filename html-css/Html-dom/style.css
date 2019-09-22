@@ -1,0 +1,87 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-image: linear-gradient(#304352, #d7d2cc);
+	width: 100%;
+	height: 100vh;
+}
+#main{
+	padding-top: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+/*p{
+	position: absolute;
+	bottom: 6px;
+    right: 30px;
+	font-style: italic;
+    color: #0945f9;
+    font-family: arial;
+}*/
+.main-content,.header{
+	background-color: white;
+	padding: 15px 10px;
+	border: 1px solid #ebebeb;
+    border-radius: 8px;
+}
+.header:hover{
+	border: 1px solid #989898;
+}
+
+.header-content2{
+	text-align: right;
+	font-size: 22px;
+	width: 100%;
+	height: 40px;
+}
+.bottom{
+	padding-top: 15px;
+
+}
+.bottom-content1{
+	float: left;
+	box-sizing: border-box;
+}
+.bottom-content2{
+	float: right;
+}
+td{
+	padding: 2px;
+}
+.input {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	font-weight: 500;
+    height: 35px;
+	width: 80px;
+	background: #dfe1e5;
+    color: #202124;
+    border: 1px solid #dfe1e5;
+    border-radius: 4px;
+    cursor: pointer; /*Cách dấu trỏ chuột*/
+}
+.input:hover{
+	background: #c5c5c5;
+}
+ .bottom-content1 > table{
+ 	float: left;
+ }
+ .bottom-content2 > table{
+ 	float: right;
+ }
+ .special{
+ 	background: #e5eeff;
+ }
+ .special1{
+ 	width: 167px;
+ }
+ .special2{
+ 	height: 81px;
+ }
+

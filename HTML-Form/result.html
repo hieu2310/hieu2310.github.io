@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Information User</title>
+        <meta charset="UTF-8"/>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                background-color: aliceblue;
+            }
+            .total{
+                padding: 15px 0 0 20px;
+            }
+            h1{
+                font-size: 35px;
+                padding-bottom: 15px;
+                padding-left: 10px;
+            }
+            p{
+                color: #ff0303;
+                font-size: 16px;
+                line-height: 35px;
+                font-family: serif;
+            }
+            a{
+                color: #000000;
+                font-size: 14px;
+                text-decoration: none;
+                padding: 2px 10px;
+                border: 1px solid #7d7d7d;
+            }
+            a:hover{
+                color: #0000ff;
+            }
+            .back{
+                padding: 15px 0 0 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="total">
+            <h1>Đăng ký thành công</h1>
+            <p id="email"></p>
+            <p id="pass"></p>
+            <p id="firstName"></p>
+            <p id="lastName"></p>
+            <p id="gender"></p>
+            <p id=address></p>
+            <p id="phone"></p>
+            <div class="back"><a href="index.html" title="back">Back</a></div>
+        </div>
+        <script>
+            var hrefResult =  window.location.href;
+            var newhrefResult = hrefResult.split(""); // Xử lý dấu cách
+            for(let i=0;i<newhrefResult.length;i++){
+                if(newhrefResult[i]=="+") newhrefResult[i] = " ";
+            }
+            hrefResult =  newhrefResult.join("").replace("%40","&#64;");
+            let locaFirstname = hrefResult.indexOf("firstname");
+            let locaLastname = hrefResult.indexOf("lastname");
+            let locaBday = hrefResult.indexOf("bday");
+            let locaGender = hrefResult.indexOf("gender");
+            let locaMail = hrefResult.indexOf("mail");
+            let locaPass = hrefResult.indexOf("password");
+            let locaAddress = hrefResult.indexOf("address");
+            let locaPhone = hrefResult.indexOf("number");
+            document.getElementById("email").innerHTML ="Email : " + hrefResult.slice(locaMail+5,locaPass-1);
+            document.getElementById("pass").innerHTML ="Password : " + hrefResult.slice(locaPass+9,locaAddress-1);
+            if(locaGender != -1 ){
+                document.getElementById("gender").innerHTML ="Gender : " + hrefResult.slice(locaGender+7,locaMail-1);
+            }
+            document.getElementById("firstName").innerHTML ="First Name : " + hrefResult.slice(locaFirstname+10,locaLastname-1);
+            document.getElementById("lastName").innerHTML ="Last Name : " + hrefResult.slice(locaLastname+9,locaBday-1);
+            if(locaAddress+9!=locaPhone){
+                document.getElementById("address").innerHTML ="Your Address : " + hrefResult.slice(locaAddress+8,locaPhone-1);
+            }
+            if(locaPhone+7 != hrefResult.length){
+                document.getElementById("phone").innerHTML ="Your Phone : " + hrefResult.slice(locaPhone+7);
+            }
+        </script>
+    </body>
+</html>

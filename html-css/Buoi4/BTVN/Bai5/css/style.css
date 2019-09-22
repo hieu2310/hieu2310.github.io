@@ -1,0 +1,8 @@
+body{
+	padding: 0;
+}
+#im {
+	margin-left: calc( ( 100% - 744px ) / 2 );
+	margin-right: calc( ( 100% - 744px ) / 2 );
+	margin-top: 70px;
+}

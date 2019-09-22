@@ -1,0 +1,26 @@
+
+#menu {
+    list-style-type: none;
+    float: left;
+    width: 100%;
+ 	background-color: grey;
+ 	display: flex;
+	align-items: center;
+	justify-content: center;
+   
+}
+#menu > li {
+    float: left;
+    padding: 15px;
+}
+a{
+	
+	text-decoration: none;
+}
+#menu > li > ul {
+    list-style-type: none;
+    display: none;
+}
+#menu > li:hover > ul {
+    display: block;
+}

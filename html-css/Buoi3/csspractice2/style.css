@@ -1,0 +1,65 @@
+* {
+	box-sizing: border-box; /*Thuật tính này sẽ không làm tăng kích thước của padding và border*/
+}
+h1{
+	font-size: 24px;
+}
+
+body{
+	background-color: rgb(226,226,226);
+	padding: 0px;
+	margin: 0px;
+}
+#wrap{
+	max-width: 1000px; 
+	margin:auto;
+}
+
+img{
+	max-width: 100%;
+}
+
+
+#menu a{
+	color: red;
+	text-decoration: none;
+}
+#menu a:hover {
+	color: black;
+}
+#menu a.active{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+
+.box {
+	padding:10px;
+	/*margin-right:5px;*/
+	float: left;
+	width: calc( 100% / 3 );
+	border: 1px solid grey;
+	border-top-width: 5px;
+}
+.box.contact:hover h2{
+	display: none;
+}
+.info{
+	border-color: purple;
+}
+.contact{
+	border-color: green;
+}
+.company{
+	border-color: blue;
+}
+
+.info span{
+	color: purple;
+}
+.contact span{
+	color: green;
+}
+.company span{
+	color: blue;
+}

@@ -1,0 +1,25 @@
+.menu ul{
+	background-color: green;
+	list-style-type: none;
+	width: 216px;
+	height: 100%;
+	padding: 0;
+	position: fixed;
+	top: -16px;
+	left: 0;
+}
+.menu li{
+	width: auto;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid black;
+}
+.menu li a{
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+	padding: 0 1em;
+}
+.menu li:hover {
+	background-color: yellow;
+}

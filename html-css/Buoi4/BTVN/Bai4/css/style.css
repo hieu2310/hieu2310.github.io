@@ -1,0 +1,91 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+#wrap{
+	width: 600px;
+	margin: auto;
+	margin-top: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.text{
+	font-size: 2em;
+	line-height: 10px;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	font-weight:bold;
+}
+.im{
+	width: 200px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.sum{
+	position:relative;
+	overflow: hidden; /*khi text bị tràn thì sẽ dấu text đi*/
+}
+.learning{
+	color:white;
+	background: green;
+	animation: cd 2s ease infinite;
+}
+	@keyframes cd{
+		24%{
+		visibility:visible;
+		}
+		25%{
+		visibility:hidden;
+		}
+		90%{
+		visibility: hidden;
+		}
+		91%{
+		visibility:visible;
+		}
+				}
+.coding{
+	color:white;
+	background: brown;
+	position:absolute;
+	bottom: 40px;
+	animation: cd1 2s ease infinite;
+}
+	@keyframes cd1{
+		25%{
+		bottom:40px;
+		}
+		50%{
+		bottom:0px;
+		}
+		57%{
+		bottom:0px;
+		}
+		58%{
+		visibility:hidden;
+		}
+				}
+.teaching{
+	color:white;
+	background-color: purple;
+	position:absolute;
+	top:40px;
+    animation: cd2 2s ease infinite;
+		}
+		@keyframes cd2{
+			57%{
+					top:40px;
+				}
+				58%{
+					top:0px;
+				}
+				89%{
+					top:0px;
+				}
+				90%{
+					visibility: hidden;
+				}
+			}

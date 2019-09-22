@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<div class="box">
+		<p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent purus nisi, rhoncus vitae metus non, pharetra suscipit tellus. Vivamus ullamcorper hendrerit risus eget vehicula. Cras vehicula mi et eros ornare scelerisque. Sed a velit odio. Aliquam nec sapien sit amet metus sollicitudin interdum vitae et eros. Ut gravida mi dictum nisl interdum, a ullamcorper mi condimentum. Integer non ante venenatis, molestie lectus vel, tristique magna. Integer condimentum lorem ex, tempor pulvinar nulla semper ut.</p>
+		<p id="p2">Morbi sit amet orci molestie, viverra libero vitae, tristique mauris. Nulla in justo gravida, fringilla est eu, tincidunt tellus. Maecenas a lectus eget neque tristique pharetra. Vestibulum porttitor aliquet dolor ac laoreet. Quisque viverra, tellus ac bibendum pharetra, justo risus pulvinar est, id ultricies est nunc a enim. Morbi feugiat accumsan urna ac tristique. Proin rhoncus porta ultricies.</p>
+		<p id="p3">Nullam in arcu bibendum, hendrerit mauris in, venenatis nunc. Phasellus at viverra nulla. Morbi sed cursus velit. Suspendisse et felis felis. Integer ac mi hendrerit, tristique lorem bibendum, fringilla ipsum. Etiam sit amet finibus urna, sed rutrum odio. Aliquam congue ut sapien quis tempus. Ut eget ornare velit. Aliquam ullamcorper venenatis lorem, nec rutrum ligula mattis nec. Sed cursus convallis lectus a ullamcorper. Vivamus finibus, lectus at pharetra lobortis, ligula turpis lacinia felis, sollicitudin mollis dui lacus nec ligula. Cras pellentesque est maximus, tincidunt ex ac, tincidunt nisi. Cras nibh ipsum, volutpat pulvinar ante ac, pellentesque condimentum enim.</p>
+	</div>
+	<script>
+		function changeColor(){
+			document.getElementById("p1").style.color = "green";
+			document.getElementById("p2").style.color = "yellow";
+			document.getElementById("p3").style.color = "red";
+		}
+		function changeBgColor(color){
+			document.body.style.backgroundColor = color;
+		}
+		function copyContent(paragraph1, paragraph2){
+			document.getElementById(paragraph1).innerText = document.getElementById(paragraph2).innerText;
+		}
+		function changeFontSize(x){
+			if(Number.isInteger(x) == true)
+				document.body.style.fontSize = x+"px";
+			else alert("Input wrong, try it again !!");
+		}
+		function increaseFontSize(paragraph){
+			let p1 = document.getElementById(paragraph);
+			let style = window.getComputedStyle(p1).fontSize;
+			if(parseInt(style)<30){
+				p1.style.fontSize = (parseInt(style)+1)+"px";
+				return p1.style.fontSize;
+			}
+		}
+		function decreaseFontSize(paragraph){
+			let p1 = document.getElementById(paragraph);
+			let style = window.getComputedStyle(p1).fontSize;
+			if(parseInt(style)>10){
+				p1.style.fontSize = (parseInt(style)-1)+"px";
+				return p1.style.fontSize;
+			}
+		}
+		// window.getComputedStyle : lấy ra giá trị thuộc tính css
+		// parseInt : lấy ra giá trị số nguyên trong thuộc tính
+	</script>	
+</body>
+</html>

@@ -1,0 +1,51 @@
+.menu1 > div  {
+	display: none;
+}
+.menu1:hover > div {
+	display: block;
+}
+.t1 > li > div{
+	display: none;
+}
+.t1 > li:hover > div{
+	display: block
+}
+
+.menu1 li{
+	position: relative;
+}
+.n1{
+	width: 220px;
+	height: 350px;
+	background-color: white;
+	position: absolute;
+	left: 0px;
+	top: 55px;
+}
+.t1{
+	padding-left: 0px;
+	padding-top: 8px;
+}
+
+.n2{
+	width: 220px;
+	height: 350px;
+	background-color: white;
+	position: absolute;
+	left: 220px;
+	top: -8px;
+}
+.n3{
+	width: 220px;
+	height: 350px;
+	background-color: white;
+	position: absolute;
+	left: 220px;
+	top: -62px;
+}
+.n1, .n2, .n3{
+	box-shadow: -1px -1px 1px 0px #000000;
+}
+.t1 li:hover{
+	background-color: #eceff1;
+}

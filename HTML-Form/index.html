@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Form</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="style.css">  
+    </head>
+    <body>
+        <div class="allForm"> 
+        <h1>Login Form</h1>
+        <form action="result.html" method="get" id="loginform"> 
+            <div class="Total Personal">Personal <span style="font-size: 13px">*</span></div>
+                <div class="cssLabel" style="padding-top: 10px"><label>First Name</label></div>
+                <div class="cssInput validateFname"><input type="text" placeholder="Tran Duc" name="firstname" id="firstname"/></div>
+                <i class="error"></i><br/>
+                <div class="cssLabel"><label>Last Name</label></div>
+                <div class="cssInput validateLname"><input type="text" placeholder="Hieu" name="lastname" id="lastname"/></div>
+                <i class="error"></i><br/>
+                <div class="cssLabel"><label>Date of Birth</label></div> 
+                <div class="cssInput"><input type="date" name="bday" max="2019-12-31" style="width: 173px"/></div>
+                <div class="cssGender"><label>Gender</label></div>
+                <div class="totalGender">
+                    <input type="radio" name="gender" id="male" value="male"/> <label class="gender" for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female"/> <label class="gender" for="female">Female</label>
+                    <input type="radio" name="gender" id="other" value="other"/> <label class="gender" for="other">Other</label>
+                </div>
+
+            <div class="Total Account">Account <span style="font-size: 13px">*</span></div>
+                <div class="cssLabel" style="padding-top: 10px"><label>Email</label></div> 
+                <div class="cssInput validateEmail"><input type="text" placeholder="hieudz@gmail.com" name="mail" id="email"/></div>
+                <i class="error"></i><br/>
+                <div class="cssLabel"><label>Password</label> </div>
+                <div class="cssInput validatePass"><input type="password" placeholder="0123456789" name="password" id="pass"/></div>
+                <i class="error"></i><br/>
+             
+            <div class="Total Contact">Contact</div>
+                <div class="cssLabel" style="padding-top: 10px"><label>Address</label></div> 
+                <div class="cssInput"><input type="text" placeholder="Tran Duy Hung- Ha Noi" name="address"/></div>
+                <div class="cssLabel"><label>Phone Number</label></div>
+                <div class="cssInput"><input type="text" placeholder="0123456789" name="number"></div>
+            
+            <div class="button"><button type="submit">Login</button></div>
+        </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+            $('#loginform').on('submit',function(){
+                var isValid = true;
+                if($('#firstname').val().trim()==''){
+                    $('.validateFname').next().text('FirstName is empty !!!');
+                    isValid = false;
+                }
+                else if($('#firstname').val().length >20){
+                    $('.validateFname').next().text('Cannot more than 20 characters !!!');
+                    isValid = false;
+                } else  $('.validateFname').next().text('');
+                
+                if($('#lastname').val().trim()==''){
+                    $('.validateLname').next().text('LastName is empty !!!');
+                    isValid = false;
+                }
+                else if($('#lastname').val().length >10){
+                    $('.validateLname').next().text('Cannot more than 10 characters !!!');
+                    isValid = false;
+                } else  $('.validateLname').next().text('');
+               
+                if($('#email').val().match(/^\w+[\w-\.]*\@\w+((-\w+)|(\w*))\.[a-z]{2,3}$/)== null){
+                    $('.validateEmail').next().text('Email is invalid !!!');
+                    isValid = false;
+                }
+                else if($('#email').val().length<6){
+                    $('.validateEmail').next().text('Cannot less than 6 characters !!!');
+                    isValid = false;
+                } else $('.validateEmail').next().text('');
+
+                if($('#pass').val().trim()==''){
+                    $('.validatePass').next().text('Password is empty !!!');
+                    isValid = false;
+                }
+                else if($('#pass').val().length <6){
+                    $('.validatePass').next().text('Cannnot less than 6 characters !!!');
+                    isValid = false;
+                } else $('.validatePass').next().text('');
+                return isValid;
+            }) 
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,15 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	background-color: grey;
+	padding: 0;
+}
+#im {
+	margin-left: calc( ( 100% - 800px ) / 2 );
+	margin-right: calc( ( 100% - 800px ) / 2 );
+	margin-top: 70px;
+}
+img{
+	border: 2px solid #ffffff;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practice1</title>
+	<style>
+		body{
+			margin: 0px;
+		}
+		.layout{
+			width: 100%;
+			display: flex;
+		}
+		.left{
+			width: 70%;
+			height: 400px;
+			background-color: red;
+			margin-right: 15px;
+		}
+		.right{
+			width: 30%;
+			height: 400px;
+		}
+		.right-top{
+			height: 200px;
+			background-color: green;
+		}
+		.right-bottom{
+			height: 200px;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="layout">
+		<div class="left"></div>
+		<div class="right">
+			<div class="right-top"></div>
+			<div class="right-bottom"></div>
+		</div>
+	</div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<title>Practice1</title>
+		
+		<style>
+			body{
+				margin: 0;
+			}
+			.red{
+				width : calc( 70% - 15px );	/*Cách 2*/
+				height: 400px;
+				background: red;
+				float: left;
+			}
+
+			.green{
+				width : 30%;
+				height : 200px;
+				background: green;
+				float: right;
+			}
+			.blue{
+				width : 30%;
+				height: 200px;
+				background: blue;
+				float: right;
+			}
+		</style>		
+
+	</head>
+
+	<body>
+		<div class="red"></div>
+		<div class="green"></div>
+		<div class="blue"></div>
+
+
+	</body>
+</html>	
+
+<!-- margin : khoảng cách bên ngoài các khối
+padding: khoảng cách bên trong các khối -->
+
+<!-- Căn giữa : margin-left: auto
+		   margin-right: auto
+		   padding-lefy: 0 --> -->

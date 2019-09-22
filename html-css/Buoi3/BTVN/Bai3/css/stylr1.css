@@ -1,0 +1,28 @@
+* {
+	box-sizing: border-box;
+}
+
+.im img{
+    width: calc( 100% / 3 - 10px ) ;
+	padding: 2px;
+	border: 1px solid white;
+	float: left;
+	margin-bottom: 15px;
+	opacity: 0.8;
+	transition: all 0.2s linear;
+	cursor: pointer;
+}
+.im1 img{
+	margin-right: 15px;
+}
+.im2 img{
+	overflow: hidden;
+}
+.im img:hover {
+	opacity: 1;
+	transform: translate(0, -5px);
+	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.im2 img:hover{
+	transform: scale(1.2);
+}

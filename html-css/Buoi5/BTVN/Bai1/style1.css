@@ -1,0 +1,41 @@
+.menu > li > div {
+    display: none;
+}
+.menu > li:hover > div {
+    display: block;
+}
+.menu li{
+	position: relative;
+}
+.n1{
+	line-height: 40px;
+	position: absolute;
+	top: 33px;
+	left: 0px;
+	width: 680px; /*có thể chia cột bằng display: flex;*/
+	background-color: white;
+}
+.t1{
+	width: 150px;
+	float: left;
+	padding-right: 20px;
+}
+.z1{
+	padding-left: 15px;
+	padding-top: 15px;
+	text-transform: uppercase;
+	font-weight: 700;
+    color: #2a2b3f;
+}
+.k1{
+	padding-left: 0px;
+	padding-bottom: 15px;
+}
+.k1 a{
+	text-transform: capitalize;
+	color: #32323d;
+	font-weight: 500;
+}
+.k1 li:hover{
+	background-color: #dbdbdb;
+}

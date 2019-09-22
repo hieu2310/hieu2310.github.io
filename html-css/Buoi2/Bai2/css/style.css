@@ -1,0 +1,13 @@
+img{
+	max-width: 300px;
+	max-height: 220px;
+}
+a:link {
+	color: black;
+}
+a:hover {
+	color: blue;
+}
+a:active {
+	color: red;
+}

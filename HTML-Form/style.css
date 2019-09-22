@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #b5b5b5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.allForm{
+    background-color: #ffffff;
+    width: 410px;
+    height: 100%;
+    border: 1px solid #3a3939;
+    padding: 0px 15px;
+
+}
+h1{
+    font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+.total{
+    color: #c4161c;
+    font-family: 'SVN-Steady';
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+label{
+    font-family: inherit;
+    color: #1902dc;
+    font-size: 12px;
+    padding-left: 1px;
+}
+.cssLabel{
+    padding: 5px 0 5px 1px;
+}
+.cssGender{
+    padding: 10px 0 5px 1px ;
+}
+.cssInput{
+    display: inline-block;
+    padding: 0 10px 0 3px;
+}
+.gender{
+    color: #1d2129;
+    font-family: 'Times New Roman', Times, serif;
+}
+.totalGender{
+    padding: 0 0 10px 15px;
+}
+.contact{
+    padding-top: 10px;
+}
+.button{
+    text-align: center;
+    padding: 25px 0 10px 0;
+}
+button{
+    padding : 10px 45px;
+    border-radius: 13px;
+    background-image: linear-gradient(#ad5389,#3c1053);
+    border: 0px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.error {
+    font-size: 13px;
+    color: #d93025;
+}

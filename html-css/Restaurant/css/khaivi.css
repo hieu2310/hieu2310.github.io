@@ -1,0 +1,147 @@
+.detail-content{
+	width: 80%;
+	height: 1000px;
+	margin: auto;
+	padding-top: 50px;
+}
+
+.top-content{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid grey;
+}
+.top-content a{
+	text-decoration: none;
+	color: #989898;
+    font-family: 'Times New Roman';
+    text-transform: capitalize;
+}
+
+.middle-content{
+	height: 500px;
+}
+.detail-middle-content{
+	padding-top: 60px;
+}
+.middle1{
+	width: 48%;
+    float: left;
+    padding-left: 2%;	
+
+}
+.middle1 img{
+	width: 400px;
+	vertical-align: middle;
+	border-radius: 10px;
+	transition: transform 0.2s linear;
+	
+}
+.middle1 img:hover{
+	transform: scale(1.1);
+}
+.order{
+	width: 400px;
+	height: 150px;
+	position: relative;
+}
+.order a{
+	background: #c4171d;
+	color: #fff;
+	font-size: 20px;
+	padding: 11px 20px;
+	border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: absolute; /*Cách căn chính giữa ptử cha */
+    left: 50%; 
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+}
+
+.middle2{
+	width: 50%;	
+	float: left;	
+}
+.middle2 > h1{
+	text-transform: capitalize;
+	font-size: 30px;
+    font-weight: 600;
+}
+.z{
+	border-bottom: 0.8px solid #e8e7e7;
+	padding-bottom: 12px;
+}
+.middle2 p{
+	font-weight: 500;
+	font-size: 17px;
+}
+.price{
+	font-weight: bold;
+    font-size: 20px;
+}
+.price1{
+	color: #960b0f;
+    font-size: 27px;
+    font-weight: 550;
+}
+.bottom-content{
+	height: 800px;
+}
+.detail-bottom-content{
+	padding-top: 135px;
+}
+.bottom-text{
+	text-align: center;
+	padding-bottom: 75px;
+}
+.bottom-text h1{
+	font-family: inherit;
+    font-weight: 500;
+    color: inherit;
+}
+.bottom{
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	grid-column-gap: 10px;
+}
+.bottom1 a{
+	text-decoration: none;
+}
+.bottom1 img{
+	width: 300px;
+	vertical-align: middle;
+	border-radius: 20px;
+}
+.logo-bottom{
+	width: 300px;
+	height: 100px;
+	position: relative;
+	text-align: center;
+}
+.logo-bottom a{
+	width: 280px;
+	display: inline-block;
+	position: absolute; /*Cách căn chính giữa ptử cha */
+    left: 50%; 
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+
+}
+.pricez{
+	text-transform: uppercase;
+	font-family: inherit;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+}
+.pricez1{
+	color: #fc3c3c;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+footer {
+    padding-top: 250px !important;
+}
