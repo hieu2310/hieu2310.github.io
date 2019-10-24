@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>Layout</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family:'Courier New', Courier, monospace;
+                text-decoration: none;
+            }
+            .top{
+                background-color: aquamarine;
+                height: 60px;
+            }
+            .logo{
+                display: inline-block;
+                padding: 20px;
+            }
+            .logo > a{
+                border: 1px solid #000000;
+                font-size: 18px;
+                background-color: bisque;
+                padding: 12px;
+                color:black;
+                font-weight: 600;
+            }
+            #menu{
+                float: right;
+                padding: 9px 20px 9px 0px;
+            }
+            .menu_sum > li{
+                float: left;
+                padding: 10px 0px 10px 10px;
+                background-color: cornflowerblue;
+                list-style-type: none;
+            }
+            .menu_sum > li > a > span{
+                color:aliceblue;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                padding: 5px 10px 5px 0px;
+            }
+            .menu_sum > li > a > span:not(.not){
+                border-right: 1px #ffffff solid;
+            }
+            .menu_sum > li:first-child{
+                display: none;
+            }
+            .bottom{
+                padding: 20px;
+            }
+            .bottom div{
+                height: 500px;
+                background-color:brown;
+            }
+            #toggle{
+                display: none;
+            }
+            @media (min-width: 800px){
+                #menu{
+                    display: block !important;
+                }
+            }
+            @media (max-width: 800px){
+                .logo{
+                    display: none;
+                }
+                #toggle{
+                    display: inline-block;
+                    padding: 8px 0px 8px 20px;
+                }
+                #menu{
+                    display: none;
+                }
+                .menu_sum > li:first-child{
+                    display: block;
+                }
+                #menu{
+                    float: left;
+                    padding: 0px 20px 0px 20px;
+                    width: 100%;
+                }
+                .menu_sum > li{
+                    float: none;
+                }
+                .menu_sum > li > a > span{
+                    border-right: 0px !important; 
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="top">
+                <a href="#" id="toggle"><img src="img.png"/></a>
+                <div class="logo"><a href="#">LOGO</a></div>
+                <div id="menu">
+                    <ul class="menu_sum">
+                        <li><a href=""><span>Trang chủ</span></a></li>
+                        <li><a href=""><span>Menu 1</span></a></li>
+                        <li><a href=""><span>Menu 2</span></a></li>
+                        <li><a href=""><span class="not">Menu 3</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom">
+                <div></div>
+            </div>
+        </div>
+        <script>
+            document.getElementById('toggle').addEventListener('click',function(){
+            var toggleMenu = document.getElementById('menu');
+            if(toggleMenu.style.display == 'none' || toggleMenu.style.display == ''){
+                document.getElementById('menu').style.display = 'block';
+            }
+            else{
+                document.getElementById('menu').style.display = 'none';
+            }  
+        });
+        </script>
+    </body>
+</html>

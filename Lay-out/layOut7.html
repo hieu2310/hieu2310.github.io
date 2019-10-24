@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>Layout</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                text-decoration: none;
+                list-style-type: none;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .top{
+                height: 60px;
+                background-color:aquamarine;
+                position: relative;
+            }
+            .logo{
+                display: inline-block;
+                padding: 20px 0px 20px 20px;
+            }
+            .logo > a{
+                font-size: 18px;
+                border: 1px #000000 solid;
+                padding: 8px 15px;
+                color: #484848;
+                font-weight: 600; 
+                background-color: bisque;
+            }
+            .menu_sum{
+                background-color:royalblue;
+                border: 1px solid #000000;
+                position: absolute;
+                top: 15%;
+                left: 40%;
+            }
+            .menu_sum > li{
+                float: left;
+                padding: 10px;
+            }
+            .menu_sum > li > a{
+                color: #ffffff;
+                font-size: 15px;
+            }
+            #login{
+                background-color: bisque;
+                border: 1px solid #000000;
+                position: absolute;
+                top: 15%;
+                right: 20px;
+            }
+            #login > li{
+                float: left;
+                padding: 10px;
+            }
+            #login > li > a{
+                font-size: 15px;
+                color: #484848;
+                font-weight: 600;
+            }
+            .bottom{
+                width: 100%;
+                padding: 20px;
+            }
+            .bottom div:first-child{
+                width: calc( 60% - 10px );
+                height: 500px;
+                display: inline-block;
+                background-color: coral;
+            }
+            .bottom div:last-child{
+                background-color: coral;
+                width: calc( 40% - 10px );
+                height: 500px;
+                float: right;
+            }
+            #toggle{
+                display: none;
+            }
+            @media (min-width: 800px){
+                #menu{
+                    display: block !important;
+                }
+            }
+            @media (max-width: 800px){
+                #toggle{
+                    display: inline-block;
+                    position: absolute;
+                    left: 20px;
+                    top: 15%;
+                }
+                .logo{
+                    position: absolute;
+                    left: 100px;
+                    top: 1%;
+                }
+                #menu{
+                    display: none;
+                }
+                .menu_sum{
+                    position: absolute;
+                    top: 100%;
+                    left: 20px;
+                    width: calc( 100% - 40px );
+                }
+                .menu_sum > li{
+                    float: none;
+                    border-bottom: 1px solid #000000;
+                }
+                .bottom div:first-child{
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                .bottom div:last-child{
+                    width: 100%;
+                    float: left;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="top">
+                <a href="#" id="toggle"><img src="img.png"/></a>
+                <div class="logo"><a href="#">LOGO</a></div>
+                <div id="menu">
+                    <ul class="menu_sum">
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                        <li><a href="#">Menu 3</a></li>
+                    </ul>
+                    <ul id="login">
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <script>
+                document.getElementById('toggle').addEventListener('click',function(){
+                var toggleMenu = document.getElementById('menu');
+                if(toggleMenu.style.display == 'none' || toggleMenu.style.display == ''){
+                    document.getElementById('menu').style.display = 'block';
+                    document.getElementById('login').style.display = 'none';
+                }
+                else{
+                    document.getElementById('menu').style.display = 'none';
+                    document.getElementById('login').style.display = 'block';
+                }
+            });
+            </script>
+    </body>
+</html>

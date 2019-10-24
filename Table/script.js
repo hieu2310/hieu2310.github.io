@@ -57,7 +57,7 @@ let students = [
     },
 
     {
-        name: 'Tran Ha Trang',
+        name: 'Tran Ha Chinh',
         birthYear: 2004,
         email: 'tranght2004@gmail.com',
         phone: '02004'
@@ -109,7 +109,7 @@ function sortStudentbyCol(column){
 
 function searchChar(){
     // Hàm search kí tự trong bảng
-    var input,inputValue,tr,trContent,tbody;
+    var input,inputValue,tr,trContent = "",tbody;
     input = document.getElementById("myInput");
     inputValue = input.value.toUpperCase();
     tbody = document.getElementById("tbody");
@@ -117,10 +117,10 @@ function searchChar(){
     tr = tbody.getElementsByTagName("tr");
     for(let i=0; i<tr.length; i++){
         // Lấy chuỗi text trong thẻ tr 
-        trContent = tr[i].textContent.replace("Chỉnh sửa","").replace("Xóa","").toUpperCase();
+        trContent = tr[i].getElementsByTagName("td")[0].textContent.toUpperCase() + tr[i].getElementsByTagName("td")[1].textContent.toUpperCase() + tr[i].getElementsByTagName("td")[2].textContent.toUpperCase() + tr[i].getElementsByTagName("td")[3].textContent.toUpperCase() ;
         if(trContent.indexOf(inputValue) > -1)
             tr[i].style.display = "";
-        else tr[i].style.display = "none"; 
+        else tr[i].style.display = "none";
     } 
 }
 

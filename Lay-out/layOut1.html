@@ -1,0 +1,41 @@
+<html lang="en">
+    <head>
+        <title>Layout</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .contain{
+                width: 80%;
+                margin: auto;
+                background-color: bisque;
+            }
+            .column{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-gap: 15px;
+                height: 500px;
+                padding: 15px;
+            }
+            .column div{
+                background-color: cornflowerblue;
+            }
+            @media (max-width:600px) {
+                .column{
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contain">
+            <div class="column">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </body>
+</html>

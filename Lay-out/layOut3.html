@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Layout</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+            .content{
+                width: 100%;
+                padding: 30px 20px 0px 20px;
+            }
+            .column{
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                grid-column-gap: 20px;
+            }
+            .column_box1{
+                height: 200px;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-gap: 15px;
+            }
+            .column_box1 div{
+                background-color: cornflowerblue;
+            }
+            .column_box2{
+                background-color: cornflowerblue;
+                height: 400px;
+            }
+            @media (max-width: 600px){
+                .column{
+                    grid-template-columns: 1fr;
+                }
+                .content{
+                    padding: 30px 15px 0px 15px;
+                }
+                .column_box1{
+                    padding:15px 0px 20px 0px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="column">
+                <div class="column_box1">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="column_box2"></div>
+            </div>
+        </div>
+    </body>
+</html>
